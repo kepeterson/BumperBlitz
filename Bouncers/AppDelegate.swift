@@ -16,9 +16,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        seedItems()
         return true
     }
 
+    func seedItems(){
+        var ud = NSUserDefaults.standardUserDefaults()
+        
+        //In case I want to reseed
+        //ud.setBool(false, forKey: "defaultsSeeded")
+        //To see fonts
+        //printFonts()
+        
+        if !(ud.boolForKey("defaultsSeeded")){
+            ud.setBool(true, forKey: "musicEnabled")
+            ud.setBool(true, forKey: "sfxEnabled")
+            ud.setBool(true, forKey: "defaultsSeeded")
+            ud.setObject([0,0,0], forKey: "highScores")
+            ud.setObject(true, forKey: "tutorialEnabled")
+        }
+    }
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
