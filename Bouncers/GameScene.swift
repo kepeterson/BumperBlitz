@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //
 //  GameScene.swift
 //  Bouncers
@@ -7,9 +7,6 @@
 //  Copyright (c) 2015 KP. All rights reserved.
 //
 
-
-=======
->>>>>>> BouncingTargets
 struct PhysicsCategory {
     static let None      : UInt32 = 0
     static let All       : UInt32 = UInt32.max
