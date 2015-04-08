@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //
 //  GameViewController.swift
 //  Bouncers
@@ -6,6 +7,8 @@
 //  Copyright (c) 2015 KP. All rights reserved.
 //
 
+=======
+>>>>>>> BouncingTargets
 import UIKit
 import SpriteKit
 import AVFoundation
